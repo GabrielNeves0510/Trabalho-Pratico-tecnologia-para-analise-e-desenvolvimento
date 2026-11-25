@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Locadora de Veículos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">LV</span><div><strong>Locadora</strong><small>de Veículos</small></div></div>
+    <nav aria-label="Navegação principal">
+      <a href="#/dashboard">Painel</a>
+      <span class="nav-group">Cadastros</span>
+      <a href="#/fabricantes">Fabricantes</a>
+      <a href="#/veiculos">Veículos</a>
+      <a href="#/clientes">Clientes</a>
+      <span class="nav-group">Operação</span>
+      <a href="#/alugueis">Aluguéis</a>
+      <a href="#/pagamentos">Pagamentos</a>
+      <span class="nav-group">Relatórios</span>
+      <a href="#/consultas">Consultas</a>
+    </nav>
+    <div id="api-status" class="api-status">Verificando API…</div>
+  </aside>
+  <div class="content">
+    <header class="topbar"><button id="menu-btn" class="icon-btn" aria-label="Abrir menu">☰</button><strong>Locadora de Veículos</strong></header>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

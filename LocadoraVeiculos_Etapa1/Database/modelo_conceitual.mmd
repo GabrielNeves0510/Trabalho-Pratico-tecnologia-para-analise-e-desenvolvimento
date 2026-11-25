@@ -1,0 +1,48 @@
+erDiagram
+    FABRICANTE ||--o{ VEICULO : possui
+    CLIENTE ||--o{ ALUGUEL : realiza
+    VEICULO ||--o{ ALUGUEL : participa
+    ALUGUEL ||--o{ PAGAMENTO : possui
+
+    FABRICANTE {
+        int Id PK
+        string Nome
+    }
+
+    VEICULO {
+        int Id PK
+        int FabricanteId FK
+        string Modelo
+        int AnoFabricacao
+        decimal Quilometragem
+        string Placa UK
+    }
+
+    CLIENTE {
+        int Id PK
+        string Nome
+        string CPF UK
+        string Email UK
+        string Telefone
+    }
+
+    ALUGUEL {
+        int Id PK
+        int ClienteId FK
+        int VeiculoId FK
+        datetime DataInicio
+        datetime DataPrevistaDevolucao
+        datetime DataDevolucao
+        decimal QuilometragemInicial
+        decimal QuilometragemFinal
+        decimal ValorDiaria
+        decimal ValorTotal
+    }
+
+    PAGAMENTO {
+        int Id PK
+        int AluguelId FK
+        datetime DataPagamento
+        decimal Valor
+        string FormaPagamento
+    }
